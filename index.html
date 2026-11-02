@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bostaco Kenya | Complete Educational Hub &middot; Preschool to College &middot; Kiambu</title>
+  <meta name="description" content="Kenya's one-stop educational hub. Approved KICD textbooks, KCSE set books, TVET engineering drawing boards, KINAP technical tools, and lab apparatus at Jubilee Stalls, Kiambu Town." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bostaco Kenya · Educational Hub Catalogue" />
+  <meta property="og:description" content="Approved KICD curriculum, KCSE set books, and TVET engineering instruments in Kiambu Town." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hub: {
+              navy: '#0B192C',
+              darkBlue: '#162840',
+              amber: '#E06B26',
+              gold: '#F4A261',
+              cream: '#FAF8F5',
+              paper: '#F1ECE3'
+            }
+          },
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::selection { background-color: #E06B26; color: #FFFFFF; }
+    .book-spine {
+      box-shadow: inset 8px 0 10px -3px rgba(0, 0, 0, 0.45), inset -1px 0 3px rgba(255, 255, 255, 0.15), 0 10px 18px -4px rgba(11, 25, 44, 0.25);
+    }
+    .thumb-spine {
+      box-shadow: inset 4px 0 6px -2px rgba(0, 0, 0, 0.5), 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+
+<body class="bg-hub-cream text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <aside class="bg-hub-navy text-white text-xs py-2 px-4 border-b border-slate-800" aria-label="Educational Hub Notice">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 font-medium">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-hub-amber animate-pulse"></span>
+        <span><strong>BOSTACO KENYA:</strong> 53 Biashara St, Jubilee Stalls, Opposite Co-op Bank, Kiambu Town</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300 text-[11px] sm:text-xs">
+        <span class="hidden md:inline">KICD Approved Curriculum</span>
+        <span class="hidden md:inline">&bull;</span>
+        <span class="hidden md:inline">KINAP / TVET Technical Stockist</span>
+        <span class="hidden md:inline">&bull;</span>
+        <button onclick="triggerWhatsApp('general')" class="hover:text-hub-gold transition-colors font-bold text-hub-gold">
+          Online WhatsApp Enquiries Active
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3 shrink-0">
+        <div class="w-11 h-11 rounded-xl bg-hub-navy text-hub-gold flex items-center justify-center font-display font-black text-2xl shadow-md border border-hub-darkBlue">
+          B
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-display text-xl sm:text-2xl font-black tracking-tight text-hub-navy leading-none">BOSTACO</span>
+            <span class="bg-amber-100 text-hub-amber text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded border border-amber-200 hidden sm:inline">Educational Hub</span>
+          </div>
+          <span class="text-[10px] tracking-widest uppercase text-hub-amber font-bold mt-1">Preschool &bull; CBC &bull; High School &bull; TVET College</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-600 bg-hub-paper px-3 py-2 rounded-xl border border-slate-200">
+          <span class="text-[10px] text-slate-400 uppercase font-mono">Watch Demos:</span>
+          <a href="#social-feed" class="hover:text-black flex items-center gap-1 text-[11px]">
+            <span>TikTok</span>
+          </a>
+          <span>&middot;</span>
+          <a href="#social-feed" class="hover:text-blue-600 flex items-center gap-1 text-[11px]">
+            <span>Facebook</span>
+          </a>
+        </div>
+
+        <button onclick="openSnapModal()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-slate-300 bg-hub-paper hover:bg-slate-200 text-hub-navy text-xs font-bold transition-all" aria-label="Snap school or course booklist">
+          <svg class="w-4 h-4 text-hub-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Snap Booklist</span>
+        </button>
+
+        <button onclick="triggerWhatsApp('general')" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors">
+          <span>Enquire on WhatsApp</span>
+        </button>
+
+        <button onclick="toggleCartModal()" class="relative p-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-hub-navy hover:bg-slate-800 text-white flex items-center gap-2 shadow-sm transition-all" aria-label="View shopping basket">
+          <svg class="w-5 h-5 text-hub-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="text-xs font-bold hidden sm:inline">Order Basket</span>
+          <span id="cart-counter" class="bg-hub-amber text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-hub-paper border-b border-slate-200 py-3 px-4 text-xs font-medium text-slate-600">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px] uppercase">College Recommended</span>
+        <span>Official Student Supply Stockist for <strong>Kiambu National Polytechnic (KINAP)</strong> &amp; Mount Kenya TVET Institutes</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-500 text-[11px]">
+        <span>Follow <strong>@BostacoKenya</strong> on TikTok &amp; Facebook</span>
+        <span>&bull;</span>
+        <span class="text-hub-amber font-bold">M-Pesa STK Push Active</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-feed" class="bg-white border-b border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-hub-amber block">From Our Feeds</span>
+          <h2 class="font-display text-xl sm:text-2xl font-black text-hub-navy">As Seen on TikTok &amp; Facebook (@BostacoKenya)</h2>
+        </div>
+        <p class="text-xs text-slate-500">Live unboxings of technical drawing tools, CBC project gear &amp; student supplies in Kiambu</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer aspect-[9/13]" onclick="triggerWhatsApp('A2 Drawing Board video inquiry')">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="A2 Drawing Board unboxing" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 p-3 flex flex-col justify-between text-white">
+            <span class="self-start px-2 py-0.5 rounded bg-black/60 text-[9px] font-bold backdrop-blur-sm border border-white/20">TikTok Unboxing</span>
+            <div class="space-y-1">
+              <span class="text-[10px] text-hub-gold font-bold block">KINAP Engineering Tool</span>
+              <p class="text-xs font-bold leading-tight line-clamp-2">A2 Drawing Board with T-Square Fitting demonstration</p>
+              <span class="text-[9px] text-slate-300 block">Tap to ask on WhatsApp &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer aspect-[9/13]" onclick="triggerWhatsApp('Automotive Engineering CDACC book inquiry')">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="CDACC Automotive Books" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 p-3 flex flex-col justify-between text-white">
+            <span class="self-start px-2 py-0.5 rounded bg-blue-600/80 text-[9px] font-bold backdrop-blur-sm">Facebook Live</span>
+            <div class="space-y-1">
+              <span class="text-[10px] text-hub-gold font-bold block">TVETA / CDACC Level 5 &amp; 6</span>
+              <p class="text-xs font-bold leading-tight line-clamp-2">Automotive Engineering Book 1 &amp; 2 by Minyaru</p>
+              <span class="text-[9px] text-slate-300 block">In Stock &middot; Kiambu Store</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer aspect-[9/13]" onclick="triggerWhatsApp('White Student Lab Coat inquiry')">
+          <img src="https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=600&q=80" alt="Student Lab Coat & Dissection Kit" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 p-3 flex flex-col justify-between text-white">
+            <span class="self-start px-2 py-0.5 rounded bg-black/60 text-[9px] font-bold backdrop-blur-sm border border-white/20">TikTok Showcase</span>
+            <div class="space-y-1">
+              <span class="text-[10px] text-hub-gold font-bold block">Medical &amp; Science Practicals</span>
+              <p class="text-xs font-bold leading-tight line-clamp-2">Cotton Student Lab Coat &amp; Dissection Forceps Kit</p>
+              <span class="text-[9px] text-slate-300 block">Tap to ask on WhatsApp &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer aspect-[9/13]" onclick="triggerWhatsApp('Back to school packaging inquiry')">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="CBC School Booklist packaging" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 p-3 flex flex-col justify-between text-white">
+            <span class="self-start px-2 py-0.5 rounded bg-emerald-600/80 text-[9px] font-bold backdrop-blur-sm">Shop Dispatch</span>
+            <div class="space-y-1">
+              <span class="text-[10px] text-hub-gold font-bold block">Kiambu Parents Service</span>
+              <p class="text-xs font-bold leading-tight line-clamp-2">Packing 15 CBC Textbooks from a WhatsApp photo</p>
+              <span class="text-[9px] text-slate-300 block">Same-Day Pickup or Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-b border-slate-200 pt-6 pb-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-black text-hub-navy">Educational Hub Catalogue</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Approved Textbooks, Technical Instruments, Revision Guides &amp; Student Supplies</p>
+        </div>
+
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <div class="relative flex-1 md:w-80">
+            <input 
+              type="text" 
+              id="search-input" 
+              oninput="handleFilterChange()" 
+              placeholder="Search title, publisher, ISBN, KINAP tools..." 
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-hub-cream border border-slate-300 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hub-amber"
+              aria-label="Search catalogue"
+            />
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+
+          <select 
+            id="sort-select" 
+            onchange="handleFilterChange()" 
+            class="px-3 py-2.5 rounded-xl bg-hub-cream border border-slate-300 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-hub-amber"
+            aria-label="Sort catalogue items"
+          >
+            <option value="featured">Featured Stock</option>
+            <option value="price-asc">Price: Low &rarr; High</option>
+            <option value="price-desc">Price: High &rarr; Low</option>
+            <option value="alpha">Title: A &ndash; Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="space-y-1.5 pt-2">
+        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-400 block">Filter by Curriculum Level:</span>
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold" id="level-filters">
+          <button onclick="setLevelFilter('All')" class="lvl-btn px-3 py-1.5 rounded-lg bg-hub-navy text-white whitespace-nowrap transition-colors" data-level="All">All Levels</button>
+          <button onclick="setLevelFilter('PP1–PP2')" class="lvl-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-level="PP1–PP2">PP1 &ndash; PP2 (Early Years)</button>
+          <button onclick="setLevelFilter('Grade 1–3')" class="lvl-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-level="Grade 1–3">Grade 1 &ndash; 3</button>
+          <button onclick="setLevelFilter('Grade 4–6')" class="lvl-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-level="Grade 4–6">Grade 4 &ndash; 6</button>
+          <button onclick="setLevelFilter('Grade 7–9')" class="lvl-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-level="Grade 7–9">Grade 7 &ndash; 9 (JSS)</button>
+          <button onclick="setLevelFilter('Form 1–4')" class="lvl-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-level="Form 1–4">Form 1 &ndash; 4 &amp; College</button>
+        </div>
+      </div>
+
+      <div class="space-y-1.5">
+        <span class="text-[10px] font-bold tracking-wider uppercase text-slate-400 block">Filter by Subject / Technical Area:</span>
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold" id="subject-filters">
+          <button onclick="setSubjectFilter('All')" class="sub-btn px-3 py-1.5 rounded-lg bg-hub-amber text-white whitespace-nowrap transition-colors" data-subject="All">All Subjects</button>
+          <button onclick="setSubjectFilter('Mathematics')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Mathematics">Mathematics</button>
+          <button onclick="setSubjectFilter('English')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="English">English</button>
+          <button onclick="setSubjectFilter('Kiswahili')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Kiswahili">Kiswahili</button>
+          <button onclick="setSubjectFilter('Science')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Science">Science / Chemistry / Physics</button>
+          <button onclick="setSubjectFilter('Social Studies')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Social Studies">Social Studies</button>
+          <button onclick="setSubjectFilter('CRE')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="CRE">CRE</button>
+          <button onclick="setSubjectFilter('Business')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Business">Business Studies</button>
+          <button onclick="setSubjectFilter('Agriculture')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Agriculture">Agriculture</button>
+          <button onclick="setSubjectFilter('Technical')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Technical">Technical &amp; Engineering</button>
+          <button onclick="setSubjectFilter('Creative Arts')" class="sub-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 whitespace-nowrap transition-colors" data-subject="Creative Arts">Creative Arts</button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs font-medium text-slate-500">
+        <span id="result-count">Showing 24 of 24 items</span>
+        <button onclick="resetFilters()" class="text-hub-amber hover:underline font-bold text-[11px]">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
+    <div id="books-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+  </main>
+
+  <section class="bg-hub-navy text-white py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-900/70 p-6 sm:p-8 rounded-2xl border border-slate-700">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="bg-hub-amber text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded">Hassle-Free School Service</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold">Have a printed school or KINAP requirement list?</h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
+            Don't spend hours searching for 15 individual titles or technical items. Take a photo of your admission letter, booklist slip, or drawing tool requirement and send it to our WhatsApp team for an itemized bill.
+          </p>
+        </div>
+        <button onclick="triggerWhatsApp('photo of school booklist or KINAP requirements')" class="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-transform transform hover:scale-105 shadow-lg">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>Send Booklist Photo via WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-3">
+          <span class="font-display text-lg font-black text-white">BOSTACO KENYA</span>
+          <p class="leading-relaxed">
+            Registered educational hub &amp; technical supplier in Kiambu Town. Providing KICD coursebooks, compulsory KCSE set books, KINAP engineering tools, and office stationery.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white uppercase text-[11px] block">Shop Location &amp; Hours</span>
+          <p class="leading-relaxed">
+            53 Biashara Street, Jubilee Stalls<br />
+            Opposite Co-operative Bank<br />
+            (Opposite Main Market axis)<br />
+            Kiambu Town, Kenya<br /><br />
+            Mon&ndash;Sat: 7:30 AM &ndash; 6:30 PM
+          </p>
+        </div>
+
+        <div class="space-y-2" id="payment-info">
+          <span class="font-bold text-white uppercase text-[11px] block">M-Pesa &amp; Dispatch</span>
+          <p class="leading-relaxed">
+            Instant M-Pesa STK Push direct from order basket.<br />
+            Store collection at Jubilee Stalls or doorstep dispatch across Kiambu, Ruiru, Thika &amp; Nairobi.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white uppercase text-[11px] block">Connect on Social Media</span>
+          <p class="leading-relaxed">
+            TikTok: <strong>@BostacoKenya</strong><br />
+            Facebook: <strong>Bostaco Kenya</strong><br />
+            Watch weekly technical tool unboxings and CBC project demonstrations.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-slate-800 text-center text-slate-500 text-[11px]">
+        &copy; <span id="current-year"></span> Bostaco Kenya. Complete Educational Hub.
+      </div>
+    </div>
+  </footer>
+
+  <div id="details-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[92vh] overflow-y-auto space-y-6">
+      <div class="flex items-start justify-between border-b border-slate-200 pb-4">
+        <div>
+          <span id="modal-book-badge" class="px-2 py-0.5 rounded bg-amber-100 text-hub-amber text-[10px] font-extrabold uppercase inline-block mb-1">Badge</span>
+          <h3 id="modal-book-title" class="font-display text-xl sm:text-2xl font-black text-hub-navy leading-tight">Title</h3>
+          <p id="modal-book-publisher" class="text-xs text-slate-500 mt-1">Publisher</p>
+        </div>
+        <button onclick="closeDetailsModal()" class="text-slate-400 hover:text-slate-600 p-2" aria-label="Close details">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+        <div class="sm:col-span-5 flex justify-center">
+          <div id="modal-book-cover" class="w-36 aspect-[2/3] rounded-xl book-spine p-3 text-white flex flex-col justify-between text-xs relative overflow-hidden"></div>
+        </div>
+
+        <div class="sm:col-span-7 space-y-2 text-xs">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+            <div class="flex justify-between">
+              <span class="text-slate-500">Level:</span>
+              <span id="modal-book-level" class="font-bold text-hub-navy">Level</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Subject:</span>
+              <span id="modal-book-subject" class="font-bold text-hub-navy">Subject</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">ISBN:</span>
+              <span id="modal-book-isbn" class="font-mono text-slate-700">ISBN</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Store Status:</span>
+              <span class="font-bold text-emerald-600">&bull; In Stock (Kiambu)</span>
+            </div>
+          </div>
+
+          <p id="modal-book-desc" class="text-slate-600 text-[11px] leading-relaxed pt-1">Detailed curriculum description.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-200 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-[10px] text-slate-400 block font-medium">Price</span>
+          <span id="modal-book-price" class="font-display font-black text-2xl text-hub-amber">KSh 0</span>
+        </div>
+
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button id="modal-add-btn" class="flex-1 sm:flex-none px-5 py-3 bg-hub-navy hover:bg-slate-800 text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+            + Add to Basket
+          </button>
+          <button id="modal-whatsapp-btn" class="px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition-colors">
+            Ask on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-7 shadow-2xl relative max-h-[92vh] flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div>
+          <h2 id="cart-heading" class="font-display text-xl sm:text-2xl font-bold text-hub-navy">Your Order Basket</h2>
+          <p class="text-xs text-slate-500">Review selected books &amp; equipment</p>
+        </div>
+        <button onclick="toggleCartModal()" class="text-slate-400 hover:text-slate-600 p-2" aria-label="Close basket">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div id="cart-items" class="overflow-y-auto flex-1 space-y-2.5 py-4 pr-1 text-xs sm:text-sm"></div>
+
+      <div class="border-t border-slate-200 pt-3 space-y-3">
+        <div class="flex justify-between items-center text-sm font-bold text-hub-navy">
+          <span>Basket Total:</span>
+          <span id="cart-total" class="text-lg font-display font-extrabold text-hub-amber">KSh 0</span>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-hub-navy flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              Pay with M-Pesa (Instant STK Push)
+            </span>
+            <span class="text-[10px] text-slate-500 font-mono">Daraja Prompt</span>
+          </div>
+          <input 
+            type="tel" 
+            id="mpesa-phone" 
+            placeholder="Phone number (e.g. 0712 345 678)"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-hub-amber bg-white font-medium" 
+            aria-label="M-Pesa phone number"
+          />
+          <button 
+            type="button"
+            onclick="payWithMpesa(event)"
+            class="w-full py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors shadow-sm"
+          >
+            Pay KSh <span id="mpesa-amount">0</span> with M-Pesa
+          </button>
+          <p class="text-[10px] text-slate-500 text-center leading-tight">
+            You will receive an M-Pesa prompt on your phone. Enter your PIN to complete payment.
+          </p>
+        </div>
+
+        <button 
+          type="button"
+          onclick="checkoutViaWhatsApp()" 
+          class="w-full py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 transition-colors"
+        >
+          <span>Send Order to Kiambu Store WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="snap-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 text-center">
+      <div class="w-12 h-12 rounded-2xl bg-amber-100 text-hub-amber flex items-center justify-center mx-auto text-xl">
+        📷
+      </div>
+      <h3 class="font-display text-xl font-bold text-hub-navy">Snap &amp; Send School Booklist</h3>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Send a photo of your school booklist or KINAP equipment sheet directly to our Kiambu store WhatsApp. We confirm prices, package your items, and arrange pickup or delivery.
+      </p>
+      <button onclick="triggerWhatsApp('photo of school booklist slip')" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition-colors">
+        Open WhatsApp to Send Photo
+      </button>
+      <button onclick="openSnapModal()" class="text-xs text-slate-400 hover:text-slate-600 block w-full">Cancel</button>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-hub-navy text-white text-xs px-5 py-3 rounded-full shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 border border-slate-700">
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <script>
+    const WORKER_URL = 'https://YOUR-WORKER.your-subdomain.workers.dev';
+    const STORE_PHONE = ''; 
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const BOOKS = [
+      { id: 1, title: "Let's Do Mathematics Grade 4", publisher: "KLB", isbn: "9789966448212", level: "Grade 4–6", subject: "Mathematics", price: 680, badge: "KICD Approved", coverBg: "bg-blue-900", desc: "KICD approved CBC curriculum coursebook for Grade 4 mathematics covering numbers, measurements, and geometry with exercises." },
+      { id: 2, title: "Kiswahili Fasaha Gredi 5", publisher: "Oxford", isbn: "9780195744211", level: "Grade 4–6", subject: "Kiswahili", price: 620, badge: "KICD Approved", coverBg: "bg-emerald-900", desc: "Kitabu cha mwanafunzi kilichoidhinishwa na KICD cha kukuza stadi za kusikiliza, kuzungumza, kusoma, kuandika na sarufi." },
+      { id: 3, title: "New Progressive Primary English Grade 6", publisher: "Oxford", isbn: "9780195748929", level: "Grade 4–6", subject: "English", price: 710, badge: "KICD Approved", coverBg: "bg-rose-950", desc: "Comprehensive Grade 6 CBC English coursebook focusing on vocabulary, comprehension, grammar, and creative writing skills." },
+      { id: 4, title: "Mentor Agriculture Grade 7", publisher: "Mentor", isbn: "9789966061123", level: "Grade 7–9", subject: "Agriculture", price: 780, badge: "KICD Approved", coverBg: "bg-lime-950", desc: "Junior Secondary School (JSS) practical learner's guide covering crop production, soil management, and animal handling." },
+      { id: 5, title: "Longhorn Pre-Technical Studies Grade 8", publisher: "Longhorn", isbn: "9789966367714", level: "Grade 7–9", subject: "Technical", price: 820, badge: "New Edition", coverBg: "bg-slate-800", desc: "Grade 8 JSS textbook introducing technical drawing principles, workplace safety, basic tools, and engineering materials." },
+      { id: 6, title: "Spotlight Integrated Science Grade 9", publisher: "Spotlight", isbn: "9789966572110", level: "Grade 7–9", subject: "Science", price: 850, badge: "New Edition", coverBg: "bg-teal-900", desc: "Comprehensive Grade 9 science curriculum integrating physics, chemistry, biology, and laboratory investigation experiments." },
+      { id: 7, title: "The River and the Source", publisher: "East African Educational", isbn: "9789966466128", level: "Form 1–4", subject: "English", price: 580, badge: "Set Book", coverBg: "bg-amber-950", desc: "Compulsory KCSE literature set book by Margaret Ogola portraying the lives of four generations of Kenyan women." },
+      { id: 8, title: "Chozi la Heri", publisher: "Vide~Muwa", isbn: "9789966773214", level: "Form 1–4", subject: "Kiswahili", price: 540, badge: "Set Book", coverBg: "bg-green-950", desc: "Tamthilia ya Fasihi ya Kiswahili iliyoteuliwa na KICD kwa wanafunzi wa shule za upili nchini Kenya." },
+      { id: 9, title: "A Doll's House", publisher: "Oxford", isbn: "9780195738913", level: "Form 1–4", subject: "English", price: 520, badge: "Set Book", coverBg: "bg-rose-900", desc: "Henrik Ibsen's renowned three-act play scripted for secondary school literature analysis and exam preparation." },
+      { id: 10, title: "Kigogo", publisher: "Longhorn", isbn: "9789966362245", level: "Form 1–4", subject: "Kiswahili", price: 490, badge: "Set Book", coverBg: "bg-teal-950", desc: "Kitabu cha tamthilia ya Kiswahili chenye ufafanuzi wa kina wa wahusika, mandhari, na maswali ya mtihani wa KCSE." },
+      { id: 11, title: "Golden Tips Mathematics Form 4", publisher: "Golden Tips", isbn: "9789966224150", level: "Form 1–4", subject: "Mathematics", price: 950, badge: "Revision", coverBg: "bg-blue-950", desc: "Complete KCSE preparation handbook with topical summaries, worked examples, and past exam questions with model answers." },
+      { id: 12, title: "KCSE Revision Chemistry", publisher: "KLB", isbn: "9789966449103", level: "Form 1–4", subject: "Science", price: 890, badge: "Revision", coverBg: "bg-cyan-950", desc: "Form 1 to Form 4 chemistry revision guide covering practical qualitative analysis, titration, and theory questions." },
+      { id: 13, title: "Secondary Physics Form 1", publisher: "KLB", isbn: "9789966446119", level: "Form 1–4", subject: "Science", price: 740, badge: "KICD Approved", coverBg: "bg-sky-950", desc: "Standard secondary school introductory physics text covering measurement, forces, pressure, and the particulate nature of matter." },
+      { id: 14, title: "Business Studies Form 2", publisher: "Moran", isbn: "9789966345811", level: "Form 1–4", subject: "Business", price: 760, badge: "KICD Approved", coverBg: "bg-amber-900", desc: "Secondary business studies textbook introducing forms of business units, government in business, and transport and communication." },
+      { id: 15, title: "Montessori First Phonics Workbook", publisher: "Queenex", isbn: "9789966089127", level: "PP1–PP2", subject: "English", price: 380, badge: "KICD Approved", coverBg: "bg-rose-900", desc: "Early childhood literacy workbook with tracing, sound recognition, and picture associations for PP1 kindergarten." },
+      { id: 16, title: "Shughuli za Kiswahili PP2", publisher: "Longhorn", isbn: "9789966369015", level: "PP1–PP2", subject: "Kiswahili", price: 410, badge: "KICD Approved", coverBg: "bg-emerald-900", desc: "Kitabu cha mazoezi ya vitendo ya lugha ya Kiswahili kwa watoto wa shule ya chekechea (PP2)." },
+      { id: 17, title: "Number Work PP1", publisher: "KLB", isbn: "9789966443125", level: "PP1–PP2", subject: "Mathematics", price: 390, badge: "KICD Approved", coverBg: "bg-indigo-950", desc: "Pre-primary mathematical activities workbook for counting, pattern recognition, and number tracing." },
+      { id: 18, title: "CBC Creative Arts Grade 3", publisher: "Spotlight", isbn: "9789966571823", level: "Grade 1–3", subject: "Creative Arts", price: 540, badge: "KICD Approved", coverBg: "bg-fuchsia-950", desc: "Practical activity book for Grade 3 music, dance, drawing, painting, and craft projects." },
+      { id: 19, title: "Health & Nutrition Grade 5", publisher: "KLB", isbn: "9789966447789", level: "Grade 4–6", subject: "Science", price: 590, badge: "KICD Approved", coverBg: "bg-teal-950", desc: "Upper primary CBC health education guide covering dietary habits, hygiene, safety, and disease prevention." },
+      { id: 20, title: "CBC Social Studies Grade 6", publisher: "Moran", isbn: "9789966346719", level: "Grade 4–6", subject: "Social Studies", price: 640, badge: "KICD Approved", coverBg: "bg-stone-900", desc: "Grade 6 social studies and citizenship coursebook exploring Eastern Africa's physical environment, history, and governance." },
+      { id: 21, title: "Business Studies Grade 8", publisher: "Mentor", isbn: "9789966061444", level: "Grade 7–9", subject: "Business", price: 790, badge: "New Edition", coverBg: "bg-amber-950", desc: "Junior secondary school business book developing financial literacy, entrepreneurship, and basic accounting records." },
+      { id: 22, title: "Agriculture Grade 9", publisher: "KLB", isbn: "9789966449912", level: "Grade 7–9", subject: "Agriculture", price: 830, badge: "New Edition", coverBg: "bg-green-900", desc: "Advanced JSS agriculture text focusing on sustainable farming practices, animal health, and agribusiness concepts." },
+      { id: 23, title: "A2 Engineering Drawing Practice & Board Spec", publisher: "East African", isbn: "9789966468900", level: "Form 1–4", subject: "Technical", price: 1450, badge: "KINAP / TVET", coverBg: "bg-slate-900", desc: "Standard technical drafting manual recommended for KINAP and technical polytechnic engineering drawing units." },
+      { id: 24, title: "Guide to Technical Drawing Instruments", publisher: "Longhorn", isbn: "9789966365505", level: "Form 1–4", subject: "Technical", price: 1100, badge: "KINAP / TVET", coverBg: "bg-zinc-900", desc: "Practical handbook for use with A2 boards, T-squares, set squares, engineering compass sets, and scale rules." }
+    ];
+
+    let activeLevel = 'All';
+    let activeSubject = 'All';
+
+    let cart = [];
+    try {
+      const savedCart = localStorage.getItem('bostaco_cart');
+      if (savedCart) cart = JSON.parse(savedCart);
+    } catch (e) {
+      cart = [];
+    }
+
+    function setLevelFilter(lvl) {
+      activeLevel = lvl;
+      document.querySelectorAll('.lvl-btn').forEach(btn => {
+        if (btn.dataset.level === lvl) {
+          btn.classList.add('bg-hub-navy', 'text-white');
+          btn.classList.remove('bg-slate-100', 'text-slate-600');
+        } else {
+          btn.classList.remove('bg-hub-navy', 'text-white');
+          btn.classList.add('bg-slate-100', 'text-slate-600');
+        }
+      });
+      handleFilterChange();
+    }
+
+    function setSubjectFilter(sub) {
+      activeSubject = sub;
+      document.querySelectorAll('.sub-btn').forEach(btn => {
+        if (btn.dataset.subject === sub) {
+          btn.classList.add('bg-hub-amber', 'text-white');
+          btn.classList.remove('bg-slate-100', 'text-slate-600');
+        } else {
+          btn.classList.remove('bg-hub-amber', 'text-white');
+          btn.classList.add('bg-slate-100', 'text-slate-600');
+        }
+      });
+      handleFilterChange();
+    }
+
+    function resetFilters() {
+      document.getElementById('search-input').value = '';
+      document.getElementById('sort-select').value = 'featured';
+      setLevelFilter('All');
+      setSubjectFilter('All');
+    }
+
+    function handleFilterChange() {
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+      const sort = document.getElementById('sort-select').value;
+
+      let filtered = BOOKS.filter(book => {
+        const matchesLevel = (activeLevel === 'All') || (book.level === activeLevel);
+        const matchesSubject = (activeSubject === 'All') || (book.subject === activeSubject);
+        const matchesQuery = query === '' || 
+          book.title.toLowerCase().includes(query) ||
+          book.publisher.toLowerCase().includes(query) ||
+          book.isbn.includes(query) ||
+          book.desc.toLowerCase().includes(query);
+        return matchesLevel && matchesSubject && matchesQuery;
+      });
+
+      if (sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      else if (sort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      else if (sort === 'alpha') filtered.sort((a, b) => a.title.localeCompare(b.title));
+
+      renderBooksGrid(filtered);
+    }
+
+    function renderBooksGrid(books) {
+      const grid = document.getElementById('books-grid');
+      const counter = document.getElementById('result-count');
+      counter.textContent = `Showing ${books.length} of ${BOOKS.length} items`;
+
+      if (books.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white rounded-3xl p-10 text-center border border-slate-200 space-y-4 my-8">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-hub-amber font-display font-black text-xl flex items-center justify-center mx-auto">!</div>
+            <h3 class="font-display text-xl font-bold text-hub-navy">No exact item matches found</h3>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">
+              We may still have this item in our 53 Biashara Street store inventory. Send your book title or school requirement list directly to our WhatsApp team.
+            </p>
+            <div class="pt-2">
+              <button onclick="triggerWhatsApp('enquiry for book or equipment not found on catalogue')" class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs">
+                <span>Send List on WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = books.map(book => `
+        <article class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+          <div onclick="openProductDetails(${book.id})" class="aspect-[2/3] w-full rounded-xl ${book.coverBg} book-spine p-3 sm:p-4 flex flex-col justify-between relative overflow-hidden text-white cursor-pointer" aria-label="Book cover for ${book.title}">
+            <div class="relative z-10 flex items-start justify-between gap-1">
+              <span class="text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-white/70 font-semibold truncate">${book.publisher}</span>
+              <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-black/30 backdrop-blur-sm border border-white/20 text-hub-gold shrink-0">${book.badge}</span>
+            </div>
+
+            <div class="relative z-10 my-auto py-2">
+              <span class="text-[9px] uppercase tracking-wider text-white/60 font-semibold block mb-0.5">${book.subject}</span>
+              <h3 class="font-display font-black text-xs sm:text-sm lg:text-base leading-snug drop-shadow-md">${book.title}</h3>
+            </div>
+
+            <div class="relative z-10 border-t border-white/20 pt-1.5 flex items-center justify-between text-[8px] sm:text-[9px] text-white/80 font-mono">
+              <span class="truncate">${book.level}</span>
+              <span class="text-hub-gold font-bold">KICD / TVET</span>
+            </div>
+
+            <div class="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/50 via-black/20 to-transparent pointer-events-none"></div>
+          </div>
+
+          <div class="pt-3 flex-1 flex flex-col justify-between space-y-2">
+            <div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[10px] font-bold text-hub-navy bg-hub-paper px-2 py-0.5 rounded">${book.level}</span>
+                <span class="text-[10px] font-medium text-slate-500">${book.subject}</span>
+              </div>
+              <h4 onclick="openProductDetails(${book.id})" class="font-display font-bold text-xs sm:text-sm text-hub-navy mt-1.5 line-clamp-2 leading-tight cursor-pointer hover:text-hub-amber">${book.title}</h4>
+              <p class="text-[10px] text-slate-400 mt-1">Publisher: <strong class="text-slate-600">${book.publisher}</strong></p>
+              <p class="text-[9px] font-mono text-slate-400">ISBN: ${book.isbn}</p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 space-y-2">
+              <div class="flex items-baseline justify-between">
+                <span class="text-[9px] text-slate-400 font-medium">Price</span>
+                <span class="font-display font-black text-sm sm:text-base text-hub-amber">KSh ${book.price.toLocaleString()}</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-1.5">
+                <button onclick="openProductDetails(${book.id})" class="w-full py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg text-[11px] transition-colors">View Details</button>
+                <button onclick="addToCart(${book.id})" class="w-full py-1.5 px-2 bg-hub-navy hover:bg-hub-darkBlue active:scale-95 text-white font-bold rounded-lg text-[11px] transition-all shadow-sm" aria-label="Add ${book.title} to basket">+ Basket</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openProductDetails(id) {
+      const book = BOOKS.find(b => b.id === id);
+      if (!book) return;
+
+      document.getElementById('modal-book-title').textContent = book.title;
+      document.getElementById('modal-book-publisher').textContent = `Publisher: ${book.publisher} | ISBN: ${book.isbn}`;
+      document.getElementById('modal-book-badge').textContent = book.badge;
+      document.getElementById('modal-book-level').textContent = book.level;
+      document.getElementById('modal-book-subject').textContent = book.subject;
+      document.getElementById('modal-book-isbn').textContent = book.isbn;
+      document.getElementById('modal-book-desc').textContent = book.desc;
+      document.getElementById('modal-book-price').textContent = `KSh ${book.price.toLocaleString()}`;
+
+      const cover = document.getElementById('modal-book-cover');
+      cover.className = `w-36 aspect-[2/3] rounded-xl book-spine p-3 text-white flex flex-col justify-between text-xs relative overflow-hidden ${book.coverBg}`;
+      cover.innerHTML = `
+        <span class="font-mono text-[9px] text-white/80">${book.publisher}</span>
+        <span class="font-display font-black leading-snug my-auto">${book.title}</span>
+        <div class="border-t border-white/20 pt-1 text-[8px] flex justify-between font-mono">
+          <span>${book.level}</span>
+          <span class="text-hub-gold font-bold">KICD</span>
+        </div>
+        <div class="absolute inset-y-0 left-0 w-2.5 bg-black/40"></div>
+      `;
+
+      document.getElementById('modal-add-btn').onclick = function() {
+        addToCart(book.id);
+        closeDetailsModal();
+      };
+      document.getElementById('modal-whatsapp-btn').onclick = function() {
+        triggerWhatsApp(`Inquiry regarding ${book.title} (KSh ${book.price})`);
+      };
+
+      document.getElementById('details-modal').classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      document.getElementById('details-modal').classList.add('hidden');
+    }
+
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem('bostaco_cart', JSON.stringify(cart));
+      } catch (e) {}
+    }
+
+    function toggleCartModal() {
+      document.getElementById('cart-modal').classList.toggle('hidden');
+    }
+
+    function openSnapModal() {
+      document.getElementById('snap-modal').classList.toggle('hidden');
+    }
+
+    function addToCart(bookId) {
+      const book = BOOKS.find(b => b.id === bookId);
+      if (!book) return;
+
+      const existing = cart.find(item => item.id === bookId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id: book.id, title: book.title, price: book.price, level: book.level, coverBg: book.coverBg, publisher: book.publisher, qty: 1 });
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+      showToast(`Added "${book.title}" to basket!`);
+    }
+
+    function changeQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const counter = document.getElementById('cart-counter');
+      const container = document.getElementById('cart-items');
+      const totalEl = document.getElementById('cart-total');
+      const mpesaAmount = document.getElementById('mpesa-amount');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const grandTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      counter.textContent = totalItems;
+      totalEl.textContent = `KSh ${grandTotal.toLocaleString()}`;
+      mpesaAmount.textContent = grandTotal.toLocaleString();
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 space-y-2">
+            <p class="text-slate-400 text-xs">Your order basket is currently empty.</p>
+            <p class="text-[11px] text-slate-500">Add textbooks or technical tools from the catalogue to order via M-Pesa or WhatsApp.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, i) => `
+        <div class="flex items-center justify-between p-2.5 rounded-2xl bg-slate-50 border border-slate-200/80 gap-3">
+          <div class="w-10 h-14 rounded-md ${item.coverBg} thumb-spine shrink-0 p-1 flex flex-col justify-between text-white text-[7px] leading-tight overflow-hidden relative">
+            <span class="truncate font-mono">${item.publisher}</span>
+            <span class="font-bold line-clamp-2">${item.title}</span>
+            <div class="absolute inset-y-0 left-0 w-1 bg-black/40"></div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-xs text-hub-navy truncate">${item.title}</h4>
+            <span class="text-[10px] text-slate-500">${item.level} &middot; KSh ${item.price.toLocaleString()}</span>
+            <div class="text-[11px] font-bold text-hub-amber mt-0.5">Line: KSh ${(item.price * item.qty).toLocaleString()}</div>
+          </div>
+
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="changeQty(${i}, -1)" class="w-6 h-6 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold flex items-center justify-center text-xs" aria-label="Decrease quantity">-</button>
+            <span class="font-bold text-xs w-4 text-center">${item.qty}</span>
+            <button onclick="changeQty(${i}, 1)" class="w-6 h-6 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold flex items-center justify-center text-xs" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function payWithMpesa(ev) {
+      const phoneInput = document.getElementById('mpesa-phone').value.trim();
+      const amount = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+      if (!phoneInput || amount <= 0) {
+        showToast('Enter your phone number and add at least one item.');
+        return;
+      }
+
+      let phone = phoneInput.replace(/\s+/g, '');
+      if (phone.startsWith('0')) phone = '254' + phone.slice(1);
+      if (phone.startsWith('+')) phone = phone.slice(1);
+      if (!phone.startsWith('254')) phone = '254' + phone;
+
+      const btn = ev.target.closest('button');
+      const original = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Sending M-Pesa prompt...';
+
+      try {
+        const res = await fetch(WORKER_URL + '/pay', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, amount })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast(data.message || 'Check your phone for the M-Pesa prompt.');
+          btn.textContent = 'Prompt sent — check your phone';
+          setTimeout(() => { toggleCartModal(); btn.disabled = false; btn.innerHTML = original; }, 3000);
+        } else {
+          showToast('Payment failed: ' + (data.message || 'try again'));
+          btn.disabled = false; btn.innerHTML = original;
+        }
+      } catch (e) {
+        showToast('Could not reach the payment server.');
+        btn.disabled = false; btn.innerHTML = original;
+      }
+    }
+
+    function triggerWhatsApp(context) {
+      const message = `Hello Bostaco Kenya (Kiambu), I have an inquiry regarding: ${context}`;
+      if (!STORE_PHONE || STORE_PHONE.trim() === '') {
+        showToast(`WhatsApp message ready: "${message}" (Set STORE_PHONE in configuration)`);
+      } else {
+        window.open(`https://wa.me/${STORE_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
+      }
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        showToast("Your basket is empty!");
+        return;
+      }
+
+      let msg = "Hello Bostaco Kenya (Kiambu), I would like to place an order from your educational catalogue:\n\n";
+      let total = 0;
+
+      cart.forEach((item, idx) => {
+        const lineTotal = item.price * item.qty;
+        total += lineTotal;
+        msg += `${idx + 1}. ${item.title} (${item.level}) x${item.qty} = KSh ${lineTotal.toLocaleString()}\n`;
+      });
+
+      msg += `\nTotal: KSh ${total.toLocaleString()}`;
+      msg += "\n\nPlease confirm stock availability and arrange pickup at Jubilee Stalls or dispatch.";
+
+      if (!STORE_PHONE || STORE_PHONE.trim() === '') {
+        showToast(`Cart order formatted (${total} KSh). Set STORE_PHONE to enable 1-click dispatch.`);
+        console.log(msg);
+      } else {
+        const url = `https://wa.me/${STORE_PHONE}?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3500);
+    }
+
+    handleFilterChange();
+    updateCartUI();
+  </script>
+</body>
+</html>
